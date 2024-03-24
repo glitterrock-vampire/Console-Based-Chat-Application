@@ -18,23 +18,23 @@ gcc -o server server.c -pthread
 gcc -o client client.c -pthread
 
 ### Running the Application
-Server
+- Server
 Start the server in a terminal window:
 
 ./server
 The server will listen for incoming connections on port 8080.
 
-Client
+- Client
 Open a new terminal window for each client and run:
 
 ./client
 Upon connection, the client will prompt for a username. After setting the username, you can start sending messages to the group chat.
 
 ### Implementation Details
-Server
+- Server
 The server uses socket programming to accept connections on port 8080. Each client connection is handled in a separate thread, allowing the server to manage multiple clients concurrently. When a message is received from one client, it's broadcast to all other connected clients.
 
-Client
+- Client
 The client establishes a connection to the server and uses two threads: one for sending messages and another for receiving. The send thread reads messages from the standard input and sends them to the server. The receive thread listens for messages from the server and prints them to the standard output.
 
 ### Usage Instructions
