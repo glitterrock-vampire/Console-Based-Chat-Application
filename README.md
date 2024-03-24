@@ -18,13 +18,13 @@ gcc -o server server.c -pthread
 gcc -o client client.c -pthread
 
 ### Running the Application
-- Server
+### Server
 Start the server in a terminal window:
 
 ./server
 The server will listen for incoming connections on port 8080.
 
-- Client
+### Client
 Open a new terminal window for each client and run:
 
 ./client
